@@ -30,7 +30,7 @@ export class LinksPath{
 
 export class BrowserPath{
     public get chrome(): string{
-        return path.resolve("../chrome");
+        return path.resolve("../../chrome");
     }
 
     public get chromeDriver(): string{

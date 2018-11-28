@@ -1,4 +1,4 @@
 export enum LinkType { 
-    download,
-    save
+    download = 0,
+    save = 1
 } ;
