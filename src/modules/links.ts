@@ -21,7 +21,7 @@ export class Links{
         this._sourceItems.forEach(item => {
             let replicateItemIndex = this._singleItems.findIndex(singleItem => singleItem.url == item.url);
             let sourceItem = this._sourceItems[replicateItemIndex];
-            if (replicateItemIndex > -1) fs.renameSync(item.path, `${PathSetting.Links.replicate}/${LinkType[sourceItem.type]}-${sourceItem.fileName}-${LinkType[item.type]}-${item.fileName}`);
+            if (replicateItemIndex > -1) fs.renameSync(item.path, `${PathSetting.Links.replicate}${LinkType[sourceItem.type]}-${sourceItem.fileName}-${LinkType[item.type]}-${item.fileName}`);
             else this._singleItems.push(item);
         })
     }
@@ -29,7 +29,7 @@ export class Links{
     private buildLinks(awaitLinkPath: string): Link[]{
         if (fs.existsSync(awaitLinkPath)) return fs.readdirSync(awaitLinkPath)
                                                    .map(file => new Link(awaitLinkPath + file))
-                                                   .filter(file => file != null);
+                                                   .filter(link => link.check());
         else return [];
     }
 }
