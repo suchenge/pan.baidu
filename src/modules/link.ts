@@ -40,12 +40,12 @@ export class Link{
 
     public fault(): void{
         console.log(`fault ${LinkType[this._type]}: ${this._fileName}`);
-        //fs.renameSync(this.path, PathSetting.Links.fault + LinkType[this._type] + "/" + this._fileName);
+        fs.renameSync(this.path, PathSetting.Links.fault + LinkType[this._type] + "/" + this._fileName);
     }
 
     public finish(): void{
         console.log(`succeed ${LinkType[this._type]}: ${this._fileName}`);
-        //fs.renameSync(this.path, PathSetting.Links.finish + LinkType[this._type] + "/" + this._fileName);
+        fs.renameSync(this.path, PathSetting.Links.finish + LinkType[this._type] + "/" + this._fileName);
     }
 
     public check(): boolean{

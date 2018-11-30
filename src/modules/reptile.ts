@@ -28,7 +28,6 @@ export class Reptile{
                         this.driver.findElement(selenium.By.xpath("//a[@title='提取文件']")).then(button => {
                             button.click().then(async () => {
                                 await this.select();
-                                this.link.finish();
                                 resolve();
                             }).catch(() => {
                                 this.link.fault();
@@ -74,6 +73,7 @@ export class Reptile{
             this.driver.findElement(selenium.By.xpath("//a[contains(@title,'下载')]")).then(button => {
                 button.click().then(() => {
                     Utilites.sleep(5000);
+                    this.link.finish();
                     resolve();
                 }).catch(() => {
                     this.link.fault();
@@ -94,6 +94,7 @@ export class Reptile{
                     this.driver.findElement(selenium.By.xpath("//a[@title='确定']")).then(a => {
                         a.click().then(() => {
                             Utilites.sleep(3000);
+                            this.link.finish();
                             resolve();
                         }).catch(() => {
                             this.link.fault();
