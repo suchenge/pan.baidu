@@ -2,7 +2,6 @@ import * as selenium from 'selenium-webdriver';
 
 import { Link } from "./link";
 import { LinkType } from './link-type';
-import { PathSetting } from "./path-setting";
 import { Utilites } from './utilites';
 import { Log, LogType } from "./log";
 
@@ -33,11 +32,13 @@ export class Reptile{
                                 this.link.fault();
                                 resolve();
                             });
-                        }, () => {
+                        }, error => {
+                            Log.write(LogType.Exception, error);
                             this.link.fault();
                             resolve();
                         });
-                    }).catch(() => {
+                    }).catch(error => {
+                        Log.write(LogType.Exception, error);
                         this.link.fault();
                         resolve();
                     });
@@ -56,7 +57,8 @@ export class Reptile{
                     if (this.link.type == LinkType.download) await this.download();
                     else await this.save();
                     resolve();
-                }).catch(() => {
+                }).catch(error => {
+                    Log.write(LogType.Exception, error);
                     this.link.fault();
                     resolve();
                 });
@@ -100,16 +102,19 @@ export class Reptile{
                             Utilites.sleep(3000);
                             this.link.finish();
                             resolve();
-                        }).catch(() => {
+                        }).catch(error => {
+                            Log.write(LogType.Exception, error);
                             this.link.fault();
                             resolve();
                         });
-                    }, () => {
+                    }, error => {
+                        Log.write(LogType.Exception, error);
                         this.link.fault();
                         resolve();
                     });
                 });
-            }, () => {
+            }, error => {
+                Log.write(LogType.Exception, error);
                 this.link.fault();
                 resolve();
             });
