@@ -4,7 +4,7 @@ import { Link } from "./link";
 import { LinkType } from './link-type';
 import { PathSetting } from "./path-setting";
 import { Utilites } from './utilites';
-import { resolve } from 'path';
+import { Log, LogType } from "./log";
 
 export class Reptile{
     constructor(private link: Link, private driver: selenium.WebDriver){}
@@ -70,16 +70,19 @@ export class Reptile{
 
     private async download(): Promise<void>{
         return new Promise<void>((resolve, reject) => {
-            this.driver.findElement(selenium.By.xpath("//a[contains(@title,'下载')]")).then(button => {
+            Utilites.sleep(5000);
+            this.driver.findElement(selenium.By.xpath("//a[contains(@title,'下载(')]")).then(button => {
                 button.click().then(() => {
                     Utilites.sleep(5000);
                     this.link.finish();
                     resolve();
-                }).catch(() => {
+                }).catch(error => {
+                    Log.write(LogType.Exception, error);
                     this.link.fault();
                     resolve();
                 });
-            }, () => {
+            }, error => {
+                Log.write(LogType.Exception, error);
                 this.link.fault();
                 resolve();
             });
@@ -88,6 +91,7 @@ export class Reptile{
 
     private async save(): Promise<void>{
         return new Promise<void>((resolve, reject) => {
+            Utilites.sleep(5000);
             this.driver.findElement(selenium.By.xpath("//a[@title='保存到网盘']")).then(button => {
                 button.click().then(() => {
                     Utilites.sleep(3000);
@@ -109,9 +113,6 @@ export class Reptile{
                 this.link.fault();
                 resolve();
             });
-        }).catch(() => {
-            this.link.fault();
-            resolve();
         });
     }
 }
