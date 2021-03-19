@@ -52,20 +52,25 @@ export class Reptile{
 
     private async select(): Promise<void>{
         return new Promise<void>((resolve, reject) => {
-            this.driver.findElement(selenium.By.xpath("//div[@node-type=\'fydGNC\']")).then(checkbox => {
-                checkbox.click().then(async () => {
+            this.driver.getTitle().then(pageTitle => {
+                if (pageTitle == "百度网盘-链接不存在"){
+                    resolve();
+                }
+                this.driver.findElement(selenium.By.xpath("//div[@node-type=\'fydGNC\']")).then(checkbox => {
+                    checkbox.click().then(async () => {
+                        if (this.link.type == LinkType.download) await this.download();
+                        else await this.save();
+                        resolve();
+                    }).catch(error => {
+                        Log.write(LogType.Exception, error);
+                        this.link.fault();
+                        resolve();
+                    });
+                }, async() => {
                     if (this.link.type == LinkType.download) await this.download();
                     else await this.save();
                     resolve();
-                }).catch(error => {
-                    Log.write(LogType.Exception, error);
-                    this.link.fault();
-                    resolve();
                 });
-            }, async() => {
-                if (this.link.type == LinkType.download) await this.download();
-                else await this.save();
-                resolve();
             });
         })
     }
@@ -97,21 +102,34 @@ export class Reptile{
             this.driver.findElement(selenium.By.xpath("//a[@title='保存到网盘']")).then(button => {
                 button.click().then(() => {
                     Utilites.sleep(3000);
-                    this.driver.findElement(selenium.By.xpath("//a[@title='确定']")).then(a => {
-                        a.click().then(() => {
+                    this.driver.findElement(selenium.By.xpath("//ul[contains(@class,'treeview-root-content')]/li[5]")).then(li => {
+                        li.click().then(() => {
                             Utilites.sleep(3000);
-                            this.link.finish();
-                            resolve();
-                        }).catch(error => {
-                            Log.write(LogType.Exception, error);
-                            this.link.fault();
-                            resolve();
-                        });
+                            this.driver.findElement(selenium.By.xpath("//a[@title='确定']")).then(a => {
+                                a.click().then(() => {
+                                    Utilites.sleep(3000);
+                                    this.link.finish();
+                                    resolve();
+                                }).catch(error => {
+                                    Log.write(LogType.Exception, error);
+                                    this.link.fault();
+                                    resolve();
+                                });
+                            }, error => {
+                                Log.write(LogType.Exception, error);
+                                this.link.fault();
+                                resolve();
+                            });
+                        })
                     }, error => {
                         Log.write(LogType.Exception, error);
                         this.link.fault();
                         resolve();
                     });
+                }, error => {
+                    Log.write(LogType.Exception, error);
+                    this.link.fault();
+                    resolve();
                 });
             }, error => {
                 Log.write(LogType.Exception, error);

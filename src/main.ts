@@ -9,7 +9,7 @@ let links: Links = new Links();
 
 if (links.items.length > 0){
     let linkItems: Map<LinkType, Link[]> = new Map<LinkType, Link[]>();
-    linkItems.set(LinkType.download, links.items.filter(item => item.type == LinkType.download));
+    //linkItems.set(LinkType.download, links.items.filter(item => item.type == LinkType.download));
     linkItems.set(LinkType.save, links.items.filter(item => item.type == LinkType.save));
 
     let count: number = 0;
