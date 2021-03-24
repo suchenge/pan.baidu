@@ -14,10 +14,10 @@ export class Browser{
                            .setChromeService(new chrome.ServiceBuilder(PathSetting.BrowserPath.chromeDriver))
                            .setChromeOptions(new chrome.Options().addArguments(`--user-data-dir=${PathSetting.BrowserPath.chrome}/${this.index}`)
                                                                  .addArguments('--no-sandbox')
-                                                                  .addArguments('--disable-dev-shm-usage')
-                                                                  .addArguments('blink-settings=imagesEnabled=false')
-                                                                  .addArguments('--headless')
-                                                                  .addArguments('--disable-gpu')
+                                                                 .addArguments('--disable-dev-shm-usage')
+                                                                 .addArguments('blink-settings=imagesEnabled=false')
+                                                                 .addArguments('--headless')
+                                                                 .addArguments('--disable-gpu')
                                             )
                            .build();
     }
