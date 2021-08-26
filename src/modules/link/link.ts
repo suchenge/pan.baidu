@@ -2,15 +2,14 @@ import * as fs from "fs";
 import * as path from "path";
 import * as iconvLite from "iconv-lite";
 
-import { LinkType } from './link-type';
-import { PathSetting } from "./path-setting";
+import { LinksPath } from "../settings/path-setting";
 
 export class Link{
     private _url: string;
     private _password: string;
     private _path: string;
     private _fileName: string;
-    private _type: LinkType;
+    private _type: string;
 
     private resolvesPattern: RegExp = /.*[:|：](http[s]{0,1}:\/\/pan.baidu.com\/.*) .*[:|：]([0-9a-zA-Z]{4})/;
     private singleUrlPattern: RegExp = /(http[s]{0,1}:\/\/pan.baidu.com\/.*)/;
@@ -28,7 +27,7 @@ export class Link{
         return this._url;
     }
 
-    public get type(): LinkType{
+    public get type(): string{
         return this._type;
     }
 
@@ -36,18 +35,13 @@ export class Link{
         return this._fileName;
     }
 
-    public open(): void{
-        console.log(`begin ${LinkType[this._type]}: ${this._fileName}`);
-    }
-
-    public fault(): void{
-        console.log(`fault ${LinkType[this._type]}: ${this._fileName}`);
-        fs.renameSync(this.path, PathSetting.Links.fault + LinkType[this._type] + "/" + this._fileName);
+    public fault(faultType = ""): void{
+        let type = faultType == "" ? "": faultType + "-";
+        fs.renameSync(this.path, LinksPath.fault + this._type + "/" + type + this._fileName);
     }
 
     public finish(): void{
-        console.log(`succeed ${LinkType[this._type]}: ${this._fileName}`);
-        fs.renameSync(this.path, PathSetting.Links.finish + LinkType[this._type] + "/" + this._fileName);
+        fs.renameSync(this.path, LinksPath.finish + this._type + "/" + this._fileName);
     }
 
     public check(): boolean{
@@ -88,12 +82,11 @@ export class Link{
         return result;
     }
 
-    constructor(filePath: string){
+
+    constructor(filePath: string, fileFolder){
         this._path = filePath;
         this._fileName = path.basename(filePath);
-    
-        if (this._path.includes(PathSetting.Links.await.download)) this._type = LinkType.download;
-        else this._type = LinkType.save;
+        this._type = fileFolder;
 
         try{
             let contentBuffer: Buffer = fs.readFileSync(this._path);

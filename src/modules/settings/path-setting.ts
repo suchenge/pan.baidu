@@ -1,30 +1,20 @@
 import * as path from "path";
 
-export class LinkAwaitPath{
-    public get download(): string{
-        return path.resolve("") + "/links/await/download/";
-    }
-
-    public get save(): string{
-        return path.resolve("") + "/links/await/save/";
-    }
-}
-
 export class LinksPath{
-    public get fault(): string{
+    public static get fault(): string{
         return path.resolve("") + "/links/fault/";
     }
 
-    public get finish(): string{
+    public static get finish(): string{
         return path.resolve("") + "/links/finish/";
     }
 
-    public get replicate(): string{
+    public static get replicate(): string{
         return path.resolve("") + "/links/replicate/";
     }
 
-    public get await(): LinkAwaitPath{
-        return new LinkAwaitPath();
+    public static get await(): string{
+        return path.resolve("") + "/links/await/";
     }
 }
 

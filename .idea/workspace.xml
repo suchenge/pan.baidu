@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d3397ba-8403-471d-807a-c1068c90cfe6" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pan.baidu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7d3397ba-8403-471d-807a-c1068c90cfe6" name="默认的" comment="默认的">
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-download.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-factory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-save.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-setting.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/settings/website-setting.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exception.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/browser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/reptile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/reptile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/link-type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/link/link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/link/links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/log.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/path-setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/settings/path-setting.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/reptile.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@types/selenium-webdriver/index.d.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1pnP5euvIIQSShdg0043lifb3DH" />
   <component name="ProjectLevelVcsManager">
@@ -33,15 +51,28 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../torrent-thief" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/@types/selenium-webdriver/index.d.ts&#10;D:/Project/pan.baidu/build/modules/crawler/crawler-behavior-save.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\pan.baidu\src\modules\link" />
+      <recent name="D:\Project\pan.baidu\src\modules\crawlies" />
+      <recent name="D:\Project\pan.baidu\src\modules" />
+      <recent name="D:\Project\pan.baidu\src\modules\settings" />
+      <recent name="D:\Project\pan.baidu\src\modules\crawler" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="build/main.js" working-dir="$PROJECT_DIR$">
@@ -61,14 +92,82 @@
       <workItem from="1615841367873" duration="63000" />
       <workItem from="1615841443163" duration="197000" />
       <workItem from="1615863028337" duration="881000" />
+      <workItem from="1629769338172" duration="7246000" />
+      <workItem from="1629849157249" duration="1691000" />
+      <workItem from="1629851676425" duration="6270000" />
+      <workItem from="1629859216952" duration="8143000" />
+      <workItem from="1629937498022" duration="5859000" />
+      <workItem from="1629944520733" duration="3297000" />
+      <workItem from="1629948225211" duration="8259000" />
+      <workItem from="1629994239360" duration="121000" />
+      <workItem from="1629994370140" duration="3878000" />
+      <workItem from="1629998440463" duration="12123000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
+          <line>52</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main.ts</url>
+          <line>16</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="this.link" />
+        <watch expression="this.link._path" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
