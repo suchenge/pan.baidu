@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d3397ba-8403-471d-807a-c1068c90cfe6" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-download.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-factory.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-save.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-setting.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/crawlies/crawler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/settings/website-setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+    <list default="true" id="7d3397ba-8403-471d-807a-c1068c90cfe6" name="默认的" comment="重构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exception.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/browser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/link-type.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/link/link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/link/links.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/log.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/path-setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/settings/path-setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/reptile.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +40,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/@types/selenium-webdriver/index.d.ts&#10;D:/Project/pan.baidu/build/modules/crawler/crawler-behavior-save.js" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -102,6 +84,11 @@
       <workItem from="1629994239360" duration="121000" />
       <workItem from="1629994370140" duration="3878000" />
       <workItem from="1629998440463" duration="12123000" />
+      <workItem from="1630056119592" duration="78000" />
+      <workItem from="1630121760879" duration="110000" />
+      <workItem from="1630121890465" duration="22000" />
+      <workItem from="1630122979460" duration="25000" />
+      <workItem from="1630124653396" duration="603000" />
     </task>
     <servers />
   </component>
@@ -139,25 +126,21 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
           <line>58</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
           <line>52</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/modules/crawlies/crawler-behavior-base.ts</url>
           <line>19</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main.ts</url>
           <line>16</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
