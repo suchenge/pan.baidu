@@ -1,10 +1,4 @@
 export class WebSiteSetting{
-    public static get account(): string{
-        return "Vito_Su";
-    }
-    public static get password(): string{
-        return "suchenge@1981";
-    }
     public static get indexUrl(): string{
         return "https://pan.baidu.com";
     }
