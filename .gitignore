@@ -1,6 +1,9 @@
 .idea
+.idea/
 .vs
+.vs/
 .vscode
+.vscode/
 build
 links
 node_modules

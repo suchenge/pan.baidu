@@ -2,7 +2,6 @@ import * as selenium from 'selenium-webdriver';
 
 import {Link} from "../link/link";
 import {Log, LogType} from "../log";
-import {WebSiteSetting} from "../settings/website-setting";
 import {Browser} from "../browser";
 
 export abstract class CrawlerBehaviorBase {
